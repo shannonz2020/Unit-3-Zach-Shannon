@@ -13,11 +13,12 @@ public class WinPercentage{
 
     while((numOfGamesWon > numOfGamesPlayed)||(numOfGamesPlayed < 1)||(numOfGamesWon < 0)||numOfGamesWon != Math.round(numOfGamesWon)||numOfGamesPlayed != Math.round(numOfGamesPlayed)){
       //redo games played
-      Scanner gamesPlayedAgain = new Scanner(System.in);
+      System.out.println("---------------------------------------");
+      gamesPlayed = new Scanner(System.in);
       System.out.println("Enter the *actual* number of games played: ");
-      numOfGamesPlayed = gamesWon.nextDouble();
+      numOfGamesPlayed = gamesPlayed.nextDouble();
       //redo games won
-      Scanner gamesWonAgain = new Scanner(System.in);
+      gamesWon = new Scanner(System.in);
       System.out.println("Enter the *actual* number of games won: ");
       numOfGamesWon = gamesWon.nextDouble();
     }
