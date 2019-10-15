@@ -24,7 +24,10 @@ public class FindMultiples{
     }
     System.out.println("Your numbers are:");
     for(double i = countBy; i <= countTo; i+= countBy){
-      if(countTo%countBy == 0){
+      //Every fifth prints a new line, find condition
+      if(){
+        System.out.println(Math.round(i))
+      }else if(countTo%countBy == 0){
           System.out.print(Math.round(i) + " ");
       }
     }
