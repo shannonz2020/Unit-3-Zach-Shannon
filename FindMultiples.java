@@ -23,12 +23,13 @@ public class FindMultiples{
       countTo = userNumber2.nextDouble();
     }
     System.out.println("Your numbers are:");
-    for(double i = countBy; i <= countTo; i+= countBy){
-      //Every fifth prints a new line, find condition
-      if(){
-        System.out.println(Math.round(i))
-      }else if(countTo%countBy == 0){
+    for(double i = countBy,j = 1; i <= countTo; i+= countBy){
+      if(j % 5 == 0){
+        System.out.println(Math.round(i) + "");
+          j++;
+      }else{
           System.out.print(Math.round(i) + " ");
+          j++;
       }
     }
   }
