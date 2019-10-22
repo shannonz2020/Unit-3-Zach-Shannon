@@ -5,22 +5,22 @@ public class DigitScanner{
     System.out.println("Enter an integer: ");
     int input = integerInput.nextInt();
     //Test input == 123
-    String integer = "" + input;
 
-    String zeroes = "";
-    String evens = "";
-    String odds = "";
-    for(int i = 0; i == integer.length() -1; i++){
-      if(integer.charAt(i) == 0){
-        zeroes = zeroes + integer.charAt(i);
-      }else if(integer.charAt(i)%2 == 0){
-        evens = evens + integer.charAt(i);
+    int zeroes = 0;
+    int evens = 0;
+    int odds = 0;
+    for(int i = Integer.toString(input).length() -1; i >= 0; i--){
+      if(input%10 == 0){
+        zeroes++;
+      }else if(input%2 == 0){
+        evens++;
       }else{
-        odds = odds + integer.charAt(i);
+        odds++;
       }
+      input = input/10;
     }
-    System.out.println("Here are the zeroes: " + zeroes);
-    System.out.println("Here are the evens: " + evens);
-    System.out.println("Here are the odds: " + odds);
+    System.out.println("There are " + zeroes + " zeroes");
+    System.out.println("There are " + evens + " evens");
+    System.out.println("There are " + odds + " odds");
   }
 }

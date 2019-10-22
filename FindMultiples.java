@@ -1,6 +1,11 @@
 import java.util.Scanner;
 import java.lang.Math;
 public class FindMultiples{
+  //method to check if the inputs are valid
+  public static boolean isValid(double countBy2, double countTo2){
+    return countBy2 <= 0 || countTo2 <= 0 || countBy2 > countTo2 || countBy2 != Math.round(countBy2) || countTo2 != Math.round(countTo2);
+  }
+  //main method
   public static void main(String[] args){
     Scanner userNumber = new Scanner(System.in);
     System.out.println("Which number would you like to count by?");
@@ -10,7 +15,7 @@ public class FindMultiples{
     System.out.println("Which number would you like to count to?");
     double countTo = userNumber2.nextDouble();
 
-    while(countBy <= 0 || countTo <= 0 || countBy > countTo || countBy != Math.round(countBy) || countTo != Math.round(countTo)){
+    while(isValid(countBy, countTo)){
       //redo countBy
       System.out.println("---------------------------------------");
       userNumber = new Scanner(System.in);
