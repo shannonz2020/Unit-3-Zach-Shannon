@@ -3,7 +3,7 @@ import java.lang.Math;
 public class FindMultiples{
   //method to check if the inputs are valid
   public static boolean isValid(double countBy2, double countTo2){
-    return countBy2 <= 0 || countTo2 <= 0 || countBy2 > countTo2 || countBy2 != Math.round(countBy2) || countTo2 != Math.round(countTo2);
+    return (countBy2 <= 0 || countTo2 <= 0 || countBy2 > countTo2 || countBy2 != Math.round(countBy2) || countTo2 != Math.round(countTo2));
   }
   //main method
   public static void main(String[] args){
